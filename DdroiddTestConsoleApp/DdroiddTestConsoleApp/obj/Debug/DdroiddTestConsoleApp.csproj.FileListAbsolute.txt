@@ -1,0 +1,7 @@
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\bin\Debug\DdroiddTestConsoleApp.exe.config
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\bin\Debug\DdroiddTestConsoleApp.exe
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\bin\Debug\DdroiddTestConsoleApp.pdb
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\obj\Debug\DdroiddTestConsoleApp.csprojAssemblyReference.cache
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\obj\Debug\DdroiddTestConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\obj\Debug\DdroiddTestConsoleApp.exe
+C:\Users\capus\source\repos\DdroiddTestConsoleApp\DdroiddTestConsoleApp\obj\Debug\DdroiddTestConsoleApp.pdb
