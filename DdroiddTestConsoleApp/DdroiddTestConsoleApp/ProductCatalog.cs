@@ -15,6 +15,7 @@ namespace DdroiddTestConsoleApp
         {
             InitCatalog();
         }
+
         //Adds Items in Catalog on start-up
         private void InitCatalog()
         {
@@ -26,6 +27,7 @@ namespace DdroiddTestConsoleApp
             productList.Add(new Product("Headphones", 59.99, CountryCodes.US, 0.6));
             productList.Add(new Product("Desk Lamp", 89.99, CountryCodes.UK, 1.3));
         }
+
         //retrives a product object in list by its name(string)
         public Product GetProductByName(string productName)
         {
@@ -37,6 +39,7 @@ namespace DdroiddTestConsoleApp
             }
             return prod;
         }
+
         //returns a string of the whole list of products
         public string ToStringShort()
         {

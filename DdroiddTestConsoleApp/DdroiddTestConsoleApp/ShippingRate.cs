@@ -11,15 +11,12 @@ namespace DdroiddTestConsoleApp
         RO,UK,US
     }
 
-
     static public class ShippingRate
     {
-
         private static  Dictionary<CountryCodes, double> countryRate = new Dictionary<CountryCodes, double>();
 
         //return rate(double) for specific country(enum)
         public static double getRateForCountry(CountryCodes country) { return countryRate[country]; }
         public static void setCountryRate(CountryCodes  country, double rate){ countryRate[country] = rate; }
-
     }
 }

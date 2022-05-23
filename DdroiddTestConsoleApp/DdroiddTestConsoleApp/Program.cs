@@ -13,7 +13,6 @@ namespace DdroiddTestConsoleApp
         {
             UI ui = new UI();
             ui.Run();
-             
         }
     }
 }

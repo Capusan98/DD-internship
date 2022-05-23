@@ -9,15 +9,13 @@ namespace DdroiddTestConsoleApp
     public class UI
     {
         private Service service;
+
         public UI() {
             service = new Service();
         }
 
-        
-
         public void Run()
         {
-           
             int option = 1;
             while (option != 0)
             {
@@ -60,12 +58,9 @@ namespace DdroiddTestConsoleApp
                     Console.WriteLine("Invalid option, try again!");
                     option = 999;
                 }
-               
                 Console.WriteLine("\nPress any key to continue..");
                 Console.ReadKey();
-
             }
-
         }
     }
 }

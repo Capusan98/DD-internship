@@ -10,12 +10,20 @@ namespace DdroiddTestConsoleApp
     {
         //list of products the user has selected 
         private List<Product> userProductList = new List<Product>();
+
         //a map key(item)->value(times the user has selected that item)
         private Dictionary<string, int> productCount = new Dictionary<string, int>();
+
         public ProductCatalog productCatalog { get; set; }
 
-        public ShoppingCart(ProductCatalog productCat) { productCatalog = productCat; }
-        public List<Product> getList() { return userProductList; }
+        public ShoppingCart(ProductCatalog productCat) {
+            productCatalog = productCat; 
+        }
+
+        public List<Product> getList() { 
+            return userProductList;
+        }
+
         public void AddToCart(Product product) {
             if (!ProductAlreadyInList(product))
             {
@@ -25,9 +33,9 @@ namespace DdroiddTestConsoleApp
             else
             {
                 productCount[product.GetItemName()]++;
-            }
-           
+            }       
         }
+
         //return true if that type of item already is in the list
         private bool ProductAlreadyInList(Product product)
         {
@@ -38,6 +46,7 @@ namespace DdroiddTestConsoleApp
             }
             return false;
         }
+
         //returns a string of the whole contents of the shopping cart
         public string CartToString()
         {
@@ -49,17 +58,14 @@ namespace DdroiddTestConsoleApp
             return result;
         }
 
-
         public int GetProductCount(Product product)
         {
             return productCount[product.GetItemName()];
         }
+
         public int GetProductCountByString(string product)
-        {
-           
-                return productCount[product];
-            
-            
+        {        
+                return productCount[product];                      
         }
     }
 }

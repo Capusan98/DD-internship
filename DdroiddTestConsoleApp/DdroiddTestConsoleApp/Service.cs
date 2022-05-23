@@ -18,6 +18,7 @@ namespace DdroiddTestConsoleApp
             shoppingCart = new ShoppingCart(productCatalog);
             SetRates();
         }
+
         private void SetRates()
         {
             ShippingRate.setCountryRate(CountryCodes.RO, 1);
@@ -52,7 +53,5 @@ namespace DdroiddTestConsoleApp
         {
             return invoice.InvoiceString();
         }
-
-
     }
 }

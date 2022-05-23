@@ -25,6 +25,7 @@ namespace DdroiddTestConsoleApp
         public double GetShippinDiscount() { return shippingDisctount; }
         public double GetKeyboardDiscount() { return keyboardDiscount; }
         public double GetThreePackDiscount() { return threePackDiscount; }
+
         //Constructor
         //sets totals, fees and discounts to 0 initially
         //computes in this orded: Subtotal/Shipping->VAT->Discounts->Total
@@ -38,16 +39,18 @@ namespace DdroiddTestConsoleApp
             keyboardDiscount = 0;
             shippingDisctount = 0;
             threePackDiscount = 0;
+
             for (int i = 0; i < shoppingCart.getList().Count(); i++)
             {
                 subTotal = subTotal + (shoppingCart.getList()[i].GetItemPrice() * shoppingCart.GetProductCount(shoppingCart.getList()[i]));
                 shipping = shipping + (ShippingRate.getRateForCountry(shoppingCart.getList()[i].GetItemShippedCountry()) * (shoppingCart.GetProductCount(shoppingCart.getList()[i]) * shoppingCart.getList()[i].GetItemWeight() / 0.1));
             }
-           
+   
             ComputeVat();//1st
             ApplyDiscounts(shoppingCart);//2nd
             ComputeTotal();//3rd
         }
+
         //customizable discounts applied 
         private void ApplyDiscounts(ShoppingCart shoppingCart)
         {
@@ -71,7 +74,6 @@ namespace DdroiddTestConsoleApp
         //returns a given percentage of the itemprice * the number of that items in the cart  
         double DiscountItem(ShoppingCart shoppingCart,string itemName,double discountPergentage)
         {
-           
             double discount = 0;
 
             try
@@ -85,10 +87,10 @@ namespace DdroiddTestConsoleApp
             }
             catch (Exception e) {
                 return discount;
-            }
-            
+            }         
             return discount;
         }
+
         //applies a discount on the shipping for a minimum number of items aquired
         int ApplyShippingDiscount(ShoppingCart shoppingCart,int minimumNumberOfItems, double ammountDiscounted)
         {
@@ -112,6 +114,7 @@ namespace DdroiddTestConsoleApp
             }
             else return 0;
         }
+
         //returns returns a given percentage of the discounted items * minimum(the number of that items in the cart or discounts awarded in threepack)
         private double ThreePackDiscount(ShoppingCart shoppingCart, string item1,string itemDiscounted,double percentageDiscounted)
         {
@@ -130,6 +133,7 @@ namespace DdroiddTestConsoleApp
             }
             return discount;
         }
+
         //return a string of the whole invoice (totals fees and discounts)
         public string InvoiceString()
         {
